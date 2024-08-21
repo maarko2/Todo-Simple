@@ -1,0 +1,7 @@
+{
+  "name": "Simplicity-Phone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
