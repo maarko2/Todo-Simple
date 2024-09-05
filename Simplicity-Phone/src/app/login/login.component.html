@@ -1,3 +1,53 @@
-<ion-header style="font-size: 30px; text-align: center">
-  Iniciar Sesión!
-</ion-header>
+<form class="formulario">
+  <!-- Logo de la Aplicación -->
+  <div class="contenedor-logo">
+    <img
+      src="https://media.discordapp.net/attachments/1133974128169320500/1281094200468836403/Logo-1.png?ex=66da7772&is=66d925f2&hm=f03f59192b3be2df002604c402909f949783b4facbb9c7cc30ea6b79476fb138&=&format=webp&quality=lossless&width=350&height=350"
+      alt="Logo"
+      class="logo"
+    />
+  </div>
+
+  <!-- Título y Subtítulo -->
+  <div class="titulos">
+    <h2>¡Bienvenido de vuelta!</h2>
+    <p>Ingrese su email y su contraseña para acceder a su cuenta.</p>
+  </div>
+
+  <!-- Formulario -->
+  <div class="campos-rellenar">
+    <!-- Email -->
+    <div class="campo">
+      <label for="email" class="textos_campos_rellenables">Email</label>
+      <input
+        id="email"
+        placeholder="nombre@example.com"
+        required
+        type="email"
+        class="campos_rellenables"
+      />
+    </div>
+
+    <!-- Contraseña -->
+    <div class="campo">
+      <label for="password" class="textos_campos_rellenables">Contraseña</label>
+      <input
+        id="password"
+        required
+        type="password"
+        class="campos_rellenables"
+      />
+    </div>
+
+    <!-- Botón de inicio de sesión -->
+    <div class="boton-contenedor">
+      <button class="boton">Iniciar Sesión</button>
+    </div>
+    <div>
+      <p class="usuario-sin-cuenta">
+        ¿No tienes una cuenta?
+        <a class="usuario-sin-cuenta" href="/register">Regístrate Aquí</a>
+      </p>
+    </div>
+  </div>
+</form>
