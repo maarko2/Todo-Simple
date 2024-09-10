@@ -1,3 +1,70 @@
-<p>
-  register works!
-</p>
+<form class="formulario">
+  <!-- Logo de la Aplicación -->
+  <div class="contenedor-logo">
+    <img
+      src="https://media.discordapp.net/attachments/1133974128169320500/1281094200468836403/Logo-1.png?ex=66e06632&is=66df14b2&hm=1ab160b85d2908569891e7ad6b9e1925388eba0eebe28c658098fb5245317986&=&format=webp&quality=lossless&width=350&height=350"
+      alt="Logo"
+      class="logo"
+    />
+  </div>
+
+  <!-- Título y Subtítulo -->
+  <div class="titulos">
+    <h2>Registrar!</h2>
+    <p>Ingrese los datos para crear una cuenta! </p>
+  </div>
+
+  <!-- Formulario -->
+  <div class="campos-rellenar"></div>
+    <!-- Nombre -->
+    <div class="campo">
+      <label for="email" class="textos_campos_rellenables">Nombre de Usuario</label>
+      <input
+        id="name"
+        required
+        type="name"
+        class="campos_rellenables"
+      />
+    </div>
+  
+  <div class="campos-rellenar">
+    <!-- Email -->
+    <div class="campo">
+      <label for="email" class="textos_campos_rellenables">Email</label>
+      <input
+        id="email"
+        placeholder="nombre@example.com"
+        required
+        type="email"
+        class="campos_rellenables"
+      />
+    </div>
+
+    <!-- Contraseña -->
+    <div class="campo">
+      <label for="password" class="textos_campos_rellenables">Contraseña</label>
+      <input
+        id="password"
+        required
+        type="password"
+        class="campos_rellenables"
+      />
+    </div>
+
+    <!-- Confirmar Contraseña -->
+    <div class="campo">
+      <label for="password" class="textos_campos_rellenables">Confirme su Contraseña</label>
+      <input
+        id="password"
+        required
+        type="password"
+        class="campos_rellenables"
+      />
+    </div>
+
+    <!-- Botón de Registro de Sesión -->
+    <div class="boton-contenedor">
+      <button class="boton">Registrar</button>
+    </div>
+  </div>
+</form>
