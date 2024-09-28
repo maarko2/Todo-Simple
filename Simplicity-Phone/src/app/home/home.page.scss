@@ -19,6 +19,7 @@
   display: grid;
   place-items: center;
   margin: auto;
+  margin-top: 10%;
 }
 
 .Mensaje_Personalizado {
@@ -46,3 +47,36 @@
   align-items: center;
   margin-top: 30px;
 }
+
+.boton-noticias{
+  --border-radius: 10%; /* Hace el botón circular */
+  width: 400px;         
+  height: 100x;        
+  display: flex;        
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;      
+  padding: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.botones-inferiores{
+  --border-radius: 50%; /* Hace el botón circular */
+  width: 100px;         
+  height: 100px;        
+  display: flex;        /* Centra el texto dentro del botón */
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;      /* Tamaño del texto */
+  padding: 0;           /* Elimina el padding para evitar distorsiones */
+}
+
+.icono-grande {
+  font-size: 50px; /* Ajusta el tamaño del icono */
+  width: 50px;
+  height: 50px;
+}
+
+
