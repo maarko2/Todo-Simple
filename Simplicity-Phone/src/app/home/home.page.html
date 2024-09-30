@@ -1,21 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="Titulo"> Simplicity Phone! </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" style="--background: #A1DAD8;">
+  <div class="Mensaje_Horario">Horario Actual</div>
+  <div class="Hora_Personalizada">14:00</div>
+  <div class="Mensaje_Personalizado">Viernes, Viña del Mar</div>
 
-<ion-content [fullscreen]="true">
-  <div class="Foto_Perfil"></div>
-  <div class="Mensaje_Personalizado">Son las 14:00Hrs</div>
-
-  <div class="Contenedor">
-    <ion-button class="boton-noticias" href="/noticias"
-      >Noticias
-      <ion-icon class="icono-grande" name="newspaper-outline"></ion-icon>
-    </ion-button>
+  <div class="Contenedor_Noticias">
+    <ion-button class="boton-noticias" href="/noticias">Noticias </ion-button>
   </div>
 
-  <div class="Contenedor">
+  <div class="Contenedor_Botones">
     <ion-button class="botones-inferiores">
       <ion-icon class="icono-grande" name="logo-whatsapp"></ion-icon>
     </ion-button>
