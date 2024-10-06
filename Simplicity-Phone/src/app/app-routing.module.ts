@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RecordatoriosModule } from './recordatorios/recordatorios.module';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
     path: 'noticias',
     loadChildren: () =>
       import('./noticias/noticias.module').then((m) => m.NoticiasModule),
+  },
+  {
+    path: 'recordatorios',
+    loadChildren: () =>
+      import('./recordatorios/recordatorios.module').then((m) => m.RecordatoriosModule),
   },
   {
     path: '',

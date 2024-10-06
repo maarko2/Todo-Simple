@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true" style="--background: #a1dad8">
+  <div class="container">
+    <img src="https://imgur.com/Tb3WAPF.png" class="icon-usuario" />
+    <h2 class="nombre-usuario">Nombre Usuario</h2>
+  </div>
+
+  <div class="recordatorios">
+    <h2 class="titulo-recordatorios">Recordatorios</h2>
+
+    <div class="recordatorio-item" *ngFor="let recordatorio of recordatorios">
+      <p class="texto-recordatorios">{{ recordatorio.texto }}</p>
+      <div class="recordatorio-item_2"></div>
+    </div>
+  </div>
+</ion-content>
