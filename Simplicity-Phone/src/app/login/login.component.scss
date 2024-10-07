@@ -39,7 +39,7 @@ $fuente-inter: 'Inter', sans-serif;
 }
 
 .campos_rellenables {
-  width: 50%;
+  width: 80%;
   padding: 20px; /* Incrementa el padding para aumentar el tamaño */
   border: 1px solid #ccc;
   border-radius: 50px;
@@ -74,7 +74,7 @@ $fuente-inter: 'Inter', sans-serif;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 50%;
+  width: 80%;
   font-size: 40px;
   font-weight: bold;
 }
@@ -86,4 +86,10 @@ $fuente-inter: 'Inter', sans-serif;
 .usuario-sin-cuenta{
     text-align: center;
     font-size: 130%;
+}
+.usuario-sin-cuenta-link{
+  text-align: center;
+  font-size: 130%;
+  margin-top: -10px;
+  font-weight: bold;
 }

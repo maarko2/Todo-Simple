@@ -17,7 +17,24 @@ $fuente-noticias: 'Inria Serif', serif;
   color: black;
 }
 
-.Hora_Personalizada {
+.hora-real
+{
+  font-size: 200px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.dia-semana{
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color:black;
+  margin-top: -4%;
+
+}
+
+.contenedor_hora {
   font-size: 1000%;
   margin-top: -3%;
   text-align: center;
@@ -48,7 +65,7 @@ $fuente-noticias: 'Inria Serif', serif;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .boton-noticias{
