@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { RecordatoriosModule } from './recordatorios/recordatorios.module';
 
 const routes: Routes = [
   {
@@ -24,13 +23,39 @@ const routes: Routes = [
       import('./noticias/noticias.module').then((m) => m.NoticiasModule),
   },
   {
+    path: 'auth',
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./pages/auth/auth.module').then((m) => m.AuthPageModule),
+      },
+      {
+        path: 'forgot-password',
+        loadChildren: () =>
+          import('./pages/auth/forgot-password/forgot-password.module').then(
+            (m) => m.ForgotPasswordPageModule
+          ),
+      },
+      {
+        path: 'sign-up',
+        loadChildren: () =>
+          import('./pages/auth/sign-up/sign-up.module').then(
+            (m) => m.SignUpPageModule
+          ),
+      },
+    ],
+  },
+  {
     path: 'recordatorios',
     loadChildren: () =>
-      import('./recordatorios/recordatorios.module').then((m) => m.RecordatoriosModule),
+      import('./recordatorios/recordatorios.module').then(
+        (m) => m.RecordatoriosModule
+      ),
   },
   {
     path: '',
-    redirectTo: 'login', // Reddireccionamiento Automatico a "Login"
+    redirectTo: 'auth', // Redireccionamiento Automático a "auth"
     pathMatch: 'full',
   },
 ];

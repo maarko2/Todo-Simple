@@ -1,0 +1,19 @@
+.campo {
+    display: flex;
+    flex-direction: column;    /* Coloca el label y el input en columna */
+    align-items: center;       /* Centra horizontalmente el contenido */
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+.campos_rellenables {
+    width: 80%;
+    padding: 0px; /* Incrementa el padding para aumentar el tamaño */
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #D9D9D9; /* Cambia el fondo del input a un color más suave */
+    margin: 0 auto;
+    height: auto; /* Permite que el padding determine la altura */
+    color: black;
+  }
