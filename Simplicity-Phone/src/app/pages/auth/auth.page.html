@@ -15,6 +15,7 @@
       <app-custom-input
         [control]="form.controls.email"
         type="email"
+        class="campos_rellenables"
       ></app-custom-input>
       <div
         class="validators"
@@ -33,6 +34,7 @@
       <app-custom-input
         [control]="form.controls.password"
         type="password"
+        class="campos_rellenables"
       ></app-custom-input>
       <div
         class="validators"
@@ -44,12 +46,11 @@
       </div>
       <p routerLink="forgot-password" class="olvidar-contrasena">¿Olvidaste tu contraseña?</p>
 
-      <ion-button class="boton"
+      <ion-button
         expand="block"
         mode="ios"
-        class="submit"
+        class="boton"
         type="submit"
-        [disabled]="form.invalid"
         >Iniciar Sesión
         <ion-icon slot="end" name="log-in-outline"></ion-icon>
       </ion-button>
@@ -57,9 +58,8 @@
       <ion-button
         expand="block"
         mode="ios"
-        class="submit"
+        class="boton"
         type="submit"
-        fill="outline"
         routerLink="sign-up"
         >Registrarse
         <ion-icon slot="end" name="person-add-outline"></ion-icon>
