@@ -9,7 +9,7 @@ form{
 .textos_campos_rellenables {
     display: block;
     font-size: 200%;
-    margin-bottom: -15px;
+    margin-bottom: -20px;
     margin-top: -5px;
     color: black;
     text-align: center;
@@ -19,7 +19,7 @@ form{
   .contenedor-logo {
     display: flex;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 10%;
   }
   
   .Titulo_Bienvenida {
@@ -32,7 +32,7 @@ form{
   }
 
   .Subtitulo_Informativo {
-    margin-top:-2%;
+    margin-top:-5%;
     text-align: center;
     font-size: 200%;
     font-family: $fuente-inter;
@@ -44,12 +44,12 @@ form{
   .requerimientos{
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     color:rgb(112, 15, 15);
+    margin-top: -10%;
   }
 
   .boton {
-    padding: 0px 20px;
     background-color: #36AD8B;
     color: white;
     font-size: 175%;
@@ -61,7 +61,7 @@ form{
     font-weight: bold;
     min-height: unset;
     outline: none;
-    margin-top: -10px;
+    margin-top: 0px;
   }
   
   ion-button {

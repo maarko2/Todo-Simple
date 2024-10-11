@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NoAuthGuard } from './guards/no-auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -8,43 +10,19 @@ const routes: Routes = [
       import('./home/home.module').then((m) => m.HomePageModule),
   },
   {
-    path: 'login',
-    loadChildren: () =>
-      import('./login/login.module').then((m) => m.LoginModule),
-  },
-  {
-    path: 'register',
-    loadChildren: () =>
-      import('./register/register.module').then((m) => m.RegisterModule),
-  },
-  {
     path: 'noticias',
     loadChildren: () =>
       import('./noticias/noticias.module').then((m) => m.NoticiasModule),
   },
   {
     path: 'auth',
-    children: [
-      {
-        path: '',
-        loadChildren: () =>
-          import('./pages/auth/auth.module').then((m) => m.AuthPageModule),
-      },
-      {
-        path: 'forgot-password',
-        loadChildren: () =>
-          import('./pages/auth/forgot-password/forgot-password.module').then(
-            (m) => m.ForgotPasswordPageModule
-          ),
-      },
-      {
-        path: 'sign-up',
-        loadChildren: () =>
-          import('./pages/auth/sign-up/sign-up.module').then(
-            (m) => m.SignUpPageModule
-          ),
-      },
-    ],
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then((m) => m.AuthPageModule), canActivate:[NoAuthGuard]
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then((m) => m.AuthPageModule), canActivate:[AuthGuard]
   },
   {
     path: 'recordatorios',
@@ -58,6 +36,11 @@ const routes: Routes = [
     redirectTo: 'auth', // Redireccionamiento Automático a "auth"
     pathMatch: 'full',
   },
+  {
+    path: 'main',
+    loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule)
+  },
+
 ];
 
 @NgModule({

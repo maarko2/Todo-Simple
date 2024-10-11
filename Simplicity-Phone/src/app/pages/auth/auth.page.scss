@@ -5,13 +5,8 @@ $fuente-inter: 'Inter', sans-serif;
   margin-top: 10%;
 }
 
-.logo {
-  width: 300px;
-  height: 300px;
-}
-
 .Titulo_Bienvenida {
-  margin-top: -2%;
+  margin-top: -10%;
   text-align: center;
   font-size: 400%;
   font-family: $fuente-inter;
@@ -32,7 +27,7 @@ $fuente-inter: 'Inter', sans-serif;
   display: block;
   font-size: 200%;
   margin-bottom: -15px;
-  margin-top: 10px;
+  margin-top: -15px;
   color: black;
   text-align: center;
   font-weight: bold;
@@ -42,6 +37,8 @@ $fuente-inter: 'Inter', sans-serif;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+  margin-top: -18px;
+  margin-bottom: 0px;
 }
 
 .requerimientos{
@@ -55,14 +52,13 @@ $fuente-inter: 'Inter', sans-serif;
   padding: 0px 20px;
   background-color: #36AD8B;
   color: white;
-  font-size: 10px;
+  font-size: 30px;
+  font-weight: bold;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 60%;
-  font-size: 40px;
-  font-weight: bold;
+  width: 90%;
   min-height: unset;
   outline: none;
 }

@@ -35,4 +35,30 @@ export class AuthPage implements OnInit {
       })
     }
   }
+
+  async getUserInfo(uid: string) {
+    if (this.form.valid) {
+
+      const loading = await this.utilsSvc.loading();
+      await loading.present();
+
+      let path= `users/${uid}`
+
+      this.firebaseSvc.getDocument(path).then(user => {
+
+        this.utilsSvc.saveInLocalStorage('user', user);
+        this.utilsSvc.routerLink('/main/home');
+        this.form.reset();
+
+
+
+      }).catch(error => {
+        console.log(error);
+
+      }).finally(() => {
+        loading.dismiss();
+      })
+    }
+  }
+
 }
