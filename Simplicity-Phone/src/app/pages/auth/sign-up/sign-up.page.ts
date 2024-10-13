@@ -22,7 +22,7 @@ export class SignUpPage implements OnInit {
   utilsSvc = inject(UtilsService)
 
   ngOnInit() {}
-
+  
   async submit() {
     if (this.form.valid) {
 

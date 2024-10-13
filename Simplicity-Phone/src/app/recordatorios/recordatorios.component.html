@@ -1,3 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recordatorios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true" style="--background: #a1dad8">
   <div class="container">
     <img src="https://imgur.com/Tb3WAPF.png" class="icon-usuario" />
@@ -6,11 +15,45 @@
 
   <div class="recordatorios">
     <h2 class="titulo-recordatorios">Recordatorios</h2>
-
-    <div class="recordatorio-item" *ngFor="let recordatorio of recordatorios">
-      <p class="texto-recordatorios">{{ recordatorio.texto }}</p>
-      <div class="recordatorio-item_2">
+    
+    <!-- Botón para agregar nuevo recordatorio -->
+    <ion-button (click)="toggleForm()" expand="block" class="boton-nuevo">
+      Agregar nuevo recordatorio
+    </ion-button>
+    
+    <!-- Formulario para crear un nuevo recordatorio -->
+    <div *ngIf="mostrarFormulario" class="form-nuevo-recordatorio">
+      
+      <!-- Input para el nombre del recordatorio -->
+      <ion-item>
+        <ion-label position="floating">Nombre del recordatorio</ion-label>
+        <ion-input type="text" [(ngModel)]="nuevoRecordatorio.texto"></ion-input>
+      </ion-item>
+      
+      <!-- Input para la hora del recordatorio -->
+      <ion-item>
+        <ion-label position="floating">Hora del recordatorio (HH:MM)</ion-label>
+        <ion-input type="text" placeholder="08:00" [(ngModel)]="nuevoRecordatorio.hora"></ion-input>
+      </ion-item>
+      
+      <!-- Selección de días -->
+      <div class="seleccion-dias">
+        <label *ngFor="let dia of diasSemana">
+          <ion-checkbox [(ngModel)]="dia.seleccionado"></ion-checkbox>
+          {{ dia.nombre }}
+        </label>
       </div>
+
+      <!-- Botón para guardar -->
+      <ion-button (click)="agregarRecordatorio()" expand="block">
+        Guardar recordatorio
+      </ion-button>
+    </div>
+
+    <!-- Lista de recordatorios existentes -->
+    <div class="recordatorio-item" *ngFor="let recordatorio of recordatorios">
+      <p>{{ recordatorio.texto }} - {{ recordatorio.hora }}</p>
+      <p>Días: {{ mostrarDiasSeleccionados(recordatorio.dias) }}</p>
     </div>
   </div>
 </ion-content>
