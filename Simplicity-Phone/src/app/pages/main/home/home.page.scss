@@ -1,0 +1,116 @@
+$fuente-noticias: 'Inria Serif', serif;
+
+.Mensaje_Horario {
+  font-size: 11vw;
+  margin-top: 10%;
+  margin-bottom: 0px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.hora-real {
+  font-size: 30vw;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-top: -10px;
+}
+
+.dia-semana {
+  font-size: 7vw;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-top: -5%;
+}
+
+.contenedor_hora {
+  margin-top: -3%;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.Contenedor_Noticias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.boton-noticias {
+    --border-radius: 30px;
+    width: 85%; /* Más ancho */
+    max-width: 500px; /* Mayor ancho máximo */
+    height: 60px; /* Altura fija */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px; /* Ajusta el padding lateral */
+    font-size: 12vw; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    --background: #D9D9D9;
+    --color: black;
+    font-family: $fuente-noticias;
+  }
+
+.Contenedor_Botones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.botones-inferiores {
+    --background: #D9D9D9; /* Color personalizado */
+    --color: black; /* Color del texto/icono */
+    --border-radius: 50%;
+    width: 25vw; /* Botón más grande */
+    height: 25vw; /* Botón más grande */
+    max-width: 130px; /* Máximo tamaño más grande */
+    max-height: 130px; /* Máximo tamaño más grande */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .icono-grande {
+    font-size: 10vw; /* Ícono más grande */
+    width: 14vw;
+    height: 14vw;
+    max-width: 60px; /* Mayor tamaño máximo del ícono */
+    max-height: 60px;
+  }
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+  .Mensaje_Horario {
+    font-size: 3rem; /* Ajusta el tamaño para pantallas grandes */
+  }
+
+  .hora-real {
+    font-size: 6rem;
+  }
+
+  .dia-semana {
+    font-size: 2rem;
+  }
+
+  .boton-noticias {
+    font-size: 2rem;
+  }
+
+  .botones-inferiores {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icono-grande {
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+  }
+}
