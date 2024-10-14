@@ -1,52 +1,52 @@
 .container {
   text-align: center;
-  background-color: #E1E1E1;
-  width: 80%;
-  min-height: 40%;
-  border-radius: 30px;
+  background-color: #ffffff;
+  width: 90%;
+  padding: 20px;
+  border-radius: 20px;
   margin: 0 auto;
   margin-top: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .icon-usuario {
-  width: 60vw;
-  height: 60vw;
-  max-width: 250px;
-  max-height: 250px;
+  width: 150%;
+  height: 150%;
+  //max-width: 120px;
+  //max-height: 120px;
   border-radius: 50%;
-  margin-top: -20%;
+  margin: 0 auto;
+  margin-top: -50px;
 }
 
 .nombre-usuario {
-  margin-top: -10%;
-  color: black;
-  font-size: 8vw;
+  margin-top: -40px;
+  color: #333;
+  font-size: 6vw;
   font-weight: bold;
 }
 
 .titulo-recordatorios {
-  font-size: 8vw;
-  color: black;
+  font-size: 6vw;
+  color: #333;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-.recordatorios {
-  padding: 20px;
-}
-
-.boton-nuevo {
-  background-color: #4285f4;
-  color: white;
   margin-bottom: 15px;
 }
 
+.recordatorios {
+  padding: 10px;
+}
+
+.boton-nuevo {
+  background-color: #4caf50;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 25px;
+}
+
 .form-nuevo-recordatorio {
-  background-color: #E6F5F8;
+  background-color: #f9f9f9;
   padding: 15px;
   border-radius: 15px;
   margin-bottom: 20px;
@@ -59,15 +59,56 @@
   margin-bottom: 15px;
 }
 
-.seleccion-dias label {
-  display: flex;
-  align-items: center;
-}
-
-.recordatorio-item {
-  background-color: #E6F5F8;
-  border-radius: 10px;
+.card-recordatorio {
+  background-color: #ffffff;
+  border-radius: 15px;
   padding: 15px;
   margin-bottom: 15px;
-  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recordatorio-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.recordatorio-header ion-icon {
+  font-size: 24px;
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+.card-recordatorio h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.progreso {
+  margin-top: 10px;
+}
+
+.barra-progreso {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 8px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.relleno {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 4px;
+}
+
+.porcentaje {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.guardar-recordatorio {
+  background-color: #f57c00;
+  color: white;
+  border-radius: 25px;
 }

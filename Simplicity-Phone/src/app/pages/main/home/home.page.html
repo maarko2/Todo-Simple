@@ -1,12 +1,13 @@
-<ion-content [fullscreen]="true" style="--background: #a1dad8">
+<ion-content [fullscreen]="true" class="home-content">
   <div class="Mensaje_Horario">Horario Actual</div>
+
   <div class="contenedor_hora">
     <h1 id="time" class="hora-real">00:00</h1>
-    <p id="date" class="dia-semana"> Dia de la Semana, Chile </p>
+    <p id="date" class="dia-semana">Dia de la Semana, Chile</p>
   </div>
 
   <div class="Contenedor_Noticias">
-    <ion-button class="boton-noticias" href="/noticias">NOTICIAS </ion-button>
+    <ion-button class="boton-noticias" href="/noticias">NOTICIAS</ion-button>
   </div>
 
   <div class="Contenedor_Botones">
@@ -21,14 +22,7 @@
     </ion-button>
   </div>
 
-<!--  Botón cerrar sesión-->
-<ion-button (click)="signOut()" expand="block" shape="round">
-  Cerrar Sesión
-</ion-button>
-
-  
+  <ion-button class="cerrar-sesion" (click)="signOut()" expand="block" shape="round">
+    Cerrar Sesión
+  </ion-button>
 </ion-content>
-
-
-  
-
