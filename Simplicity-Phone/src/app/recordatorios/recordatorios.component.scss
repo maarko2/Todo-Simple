@@ -12,8 +12,6 @@
 .icon-usuario {
   width: 150%;
   height: 150%;
-  //max-width: 120px;
-  //max-height: 120px;
   border-radius: 50%;
   margin: 0 auto;
   margin-top: -50px;
@@ -26,45 +24,46 @@
   font-weight: bold;
 }
 
-.titulo-recordatorios {
-  font-size: 6vw;
-  color: #333;
+.boton-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.boton {
+  background-color: #36AD8B;
+  color: white;
+  font-size: 30px;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  width: 90%;
+  min-height: unset;
+}
+
+ion-button {
+  --background: #36AD8B;
+  --color: white;
+  --background-hover: #2E8B57;
+  --background-activated: #2E8B57;
+  --background-focused: #2E8B57;
 }
 
 .recordatorios {
-  padding: 10px;
-}
-
-.boton-nuevo {
-  background-color: #4caf50;
-  color: white;
-  margin-bottom: 15px;
-  border-radius: 25px;
-}
-
-.form-nuevo-recordatorio {
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
-
-.seleccion-dias {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 15px;
+
 }
 
 .card-recordatorio {
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 15px;
+  width: 90%;
+  background-color: #f1fcff; /* Color verde para los recordatorios */
+  border-radius: 30px;
+  padding: 20px;
   margin-bottom: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .recordatorio-header {
@@ -74,7 +73,7 @@
 }
 
 .recordatorio-header ion-icon {
-  font-size: 24px;
+  font-size: 40px;
   color: #4caf50;
   margin-right: 10px;
 }
@@ -82,33 +81,12 @@
 .card-recordatorio h3 {
   font-size: 16px;
   margin: 0;
-}
-
-.progreso {
-  margin-top: 10px;
-}
-
-.barra-progreso {
-  width: 100%;
-  background-color: #e0e0e0;
-  height: 8px;
-  border-radius: 4px;
-  position: relative;
-}
-
-.relleno {
-  height: 100%;
-  background-color: #4caf50;
-  border-radius: 4px;
-}
-
-.porcentaje {
+  font-size: 30px;
   font-weight: bold;
-  color: #4caf50;
 }
 
-.guardar-recordatorio {
-  background-color: #f57c00;
-  color: white;
-  border-radius: 25px;
+.card-recordatorio p {
+  font-size: 14px;
+  color: #4c7fb5;
+  font-size: 20px;
 }
