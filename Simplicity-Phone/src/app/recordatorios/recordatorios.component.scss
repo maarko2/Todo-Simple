@@ -33,7 +33,7 @@
 .boton {
   background-color: #36AD8B;
   color: white;
-  font-size: 30px;
+  font-size: 7vw;
   font-weight: bold;
   border-radius: 20px;
   transition: background-color 0.3s;
@@ -47,6 +47,13 @@ ion-button {
   --background-hover: #2E8B57;
   --background-activated: #2E8B57;
   --background-focused: #2E8B57;
+}
+
+.Titulo-Principal{
+  font-size: 8.1vw;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: -7%;
 }
 
 .recordatorios {
