@@ -12,18 +12,20 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () =>
-      import('./pages/auth/auth.module').then((m) => m.AuthPageModule), canActivate:[NoAuthGuard]
+      import('./pages/auth/auth.module').then((m) => m.AuthPageModule),
+    canActivate: [NoAuthGuard],
   },
   {
     path: 'auth',
     loadChildren: () =>
-      import('./pages/auth/auth.module').then((m) => m.AuthPageModule), canActivate:[AuthGuard]
+      import('./pages/auth/auth.module').then((m) => m.AuthPageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'recordatorios',
     loadChildren: () =>
       import('./recordatorios/recordatorios.module').then(
-        (m) => m.RecordatoriosModule
+        (m) => m.RecordatoriosPageModule
       ),
   },
   {
@@ -33,7 +35,16 @@ const routes: Routes = [
   },
   {
     path: 'main',
-    loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule)
+    loadChildren: () =>
+      import('./pages/main/main.module').then((m) => m.MainPageModule),
+  },
+  {
+    path: 'recordatorios',
+    loadChildren: () => import('./recordatorios/recordatorios.module').then( m => m.RecordatoriosPageModule)
+  },
+  {
+    path: 'nuevo-recordatorio',
+    loadChildren: () => import('./recordatorios/nuevo-recordatorio/nuevo-recordatorio.module').then( m => m.NuevoRecordatorioPageModule)
   },
 
 ];

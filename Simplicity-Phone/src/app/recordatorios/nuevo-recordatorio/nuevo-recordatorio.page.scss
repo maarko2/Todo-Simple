@@ -1,0 +1,61 @@
+$fuente-inria-sans: 'Inria Sans', sans-serif;
+.container-imagen {
+    text-align: center;
+    background-color: #e1e1e1;
+    width: 90%;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px auto 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera para darle profundidad
+  }
+
+  .container-formulario {
+    text-align: center;
+    background-color: #ffffff;
+    width: 90%;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px auto 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera para darle profundidad
+  }
+  
+  .Titulos-formulario{
+    font-weight: bold;
+    font-family: $fuente-inria-sans; // Llama a la variable de fuente
+    font-weight: bold;
+    color: black;
+  }
+  
+  .icon-usuario {
+    width: 500px;
+    border-radius: 50%;
+    margin-top: -50px;
+    margin-bottom: -50px;
+  }
+  
+  .boton-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    color: #18A854;
+  }
+  
+  .boton {
+    background-color: #18A854;
+    color: white;
+    font-size: 6vw;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    width: 80%;
+    min-height: unset;
+  }
+  
+  ion-button {
+    --background: #18A854;
+    --color: white;
+    --background-hover: #2E8B57;
+    --background-activated: #2E8B57;
+    --background-focused: #2E8B57;
+  }
+  

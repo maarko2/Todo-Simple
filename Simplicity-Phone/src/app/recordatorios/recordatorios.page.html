@@ -1,0 +1,38 @@
+<ion-buttons slot="start">
+  <ion-back-button text="" defaultHref="/"></ion-back-button>
+</ion-buttons>
+
+<ion-content [fullscreen]="true" style="--background: #a1dad8">
+  <h1 class="Titulo-Principal">Recordatorios</h1>
+  
+  <!-- Contenedor del usuario -->
+  <div class="container">
+    <img src="https://imgur.com/Tb3WAPF.png" class="icon-usuario" />
+  </div>
+
+  <!-- Botón para agregar nuevo recordatorio -->
+  <div class="boton-container">
+    <ion-button class="boton" (click)="presentActionSheet()">Nuevo Recordatorio</ion-button>
+  </div>
+
+  <!-- Lista de recordatorios -->
+  <div class="recordatorios">
+    <ion-card class="card-recordatorio">
+      <div class="recordatorio-header">
+        <h3>Nombre del Remedio</h3>
+      </div>
+      <p>Hora: 14:00pm</p>
+      <p>Días: Lunes, Viernes, Sabado</p>
+      <button class="foto-remedio">FOTO REMEDIO</button>
+    </ion-card>
+
+    <ion-card class="card-recordatorio">
+      <div class="recordatorio-header">
+        <h3>Nombre del Remedio 2</h3>
+      </div>
+      <p>Hora: 09:30am</p>
+      <p>Días: Martes, Jueves</p>
+      <button class="foto-remedio">FOTO REMEDIO</button>
+    </ion-card>
+  </div>
+</ion-content>

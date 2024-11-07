@@ -9,9 +9,11 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
 
+
 // ========== Firebase ===========
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment.prod';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,7 @@ import { environment } from 'src/environments/environment.prod';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    ReactiveFormsModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true" style="--background: #a1dad8">
+  <form [formGroup]="recordatorioForm" (ngSubmit)="submit()" class="container-formulario">
+    <h1 class="Titulos-formulario">Escriba el Nombre del Medicamento</h1>
+    <ion-input formControlName="nombre" placeholder="Nombre del Medicamento"></ion-input>
+
+    <h1 class="Titulos-formulario">Seleccione los Días</h1>
+    <ion-list>
+      <ion-item *ngFor="let dia of dias">
+        <ion-checkbox
+          slot="start"
+          [value]="dia"
+          (ionChange)="onDaySelect(dia, $event)"
+          [checked]="isDaySelected(dia)">
+        </ion-checkbox>
+        <ion-label>{{ dia }}</ion-label> <!-- Esto muestra el texto al lado del checkbox -->
+      </ion-item>
+    </ion-list>
+
+    <h1 class="Titulos-formulario">Seleccione la Hora</h1>
+    <ion-datetime formControlName="hora" displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+
+    <ion-button expand="block" type="submit" [disabled]="!recordatorioForm.valid">Guardar recordatorio</ion-button>
+  </form>
+</ion-content>

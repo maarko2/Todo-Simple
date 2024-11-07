@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
 
-import { RecordatoriosComponent } from './recordatorios.component';
-import { RouterModule } from '@angular/router';
+import { RecordatoriosPageRoutingModule } from './recordatorios-routing.module';
+
+import { RecordatoriosPage } from './recordatorios.page';
 
 @NgModule({
-  declarations: [RecordatoriosComponent],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: RecordatoriosComponent
-      }
-    ])
-  ]
+    RecordatoriosPageRoutingModule
+  ],
+  declarations: [RecordatoriosPage]
 })
-export class RecordatoriosModule { }
+export class RecordatoriosPageModule {}

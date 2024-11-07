@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { UtilsService } from 'src/app/services/utils.service';
 import { ActionSheetController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recordatorios',
-  templateUrl: './recordatorios.component.html',
-  styleUrls: ['./recordatorios.component.scss'],
+  templateUrl: './recordatorios.page.html',
+  styleUrls: ['./recordatorios.page.scss'],
 })
-export class RecordatoriosComponent {
+export class RecordatoriosPage {
   userName: string | null = null;
 
-  constructor(private utilsSvc: UtilsService, private actionSheetCtrl: ActionSheetController) {
+  constructor(private utilsSvc: UtilsService, private actionSheetCtrl: ActionSheetController, private router: Router) {
     this.getUserName();
   }
 
@@ -27,8 +28,8 @@ export class RecordatoriosComponent {
       buttons: [
         {
           text: 'Crear Recordatorio',
-          data: {
-            action: '',
+          handler: () => {
+            this.router.navigate(['/nuevo-recordatorio']);
           },
         },
         {
