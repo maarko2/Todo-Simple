@@ -8,6 +8,24 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera para darle profundidad
 }
 
+.card-recordatorio {
+  width: 90%;
+  max-width: 400px; // Asegura que el tamaño sea cómodo en pantallas grandes
+  background-color: #ffffff; // Fondo blanco para transmitir limpieza y profesionalismo
+  border-left: 5px solid #4caf50; // Borde verde a la izquierda para resaltar el recordatorio
+  border-radius: 20px; // Bordes redondeados
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); // Sombra sutil para dar profundidad
+  transition: transform 0.3s ease; // Efecto de escala al pasar el mouse
+}
+
+.recordatorios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .icon-usuario {
   width: 500px;
   //height: 200%;
@@ -44,10 +62,10 @@ ion-button {
 }
 
 .Titulo-Principal{
-  font-size: 8.1vw;
+  font-size: 7.1vw;
   text-align: center;
   font-weight: bold;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
 }
 
 .recordatorios {

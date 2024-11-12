@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { NoAuthGuard } from './guards/no-auth.guard';
-import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -16,12 +15,6 @@ const routes: Routes = [
     canActivate: [NoAuthGuard],
   },
   {
-    path: 'auth',
-    loadChildren: () =>
-      import('./pages/auth/auth.module').then((m) => m.AuthPageModule),
-    canActivate: [AuthGuard],
-  },
-  {
     path: 'recordatorios',
     loadChildren: () =>
       import('./recordatorios/recordatorios.module').then(
@@ -29,8 +22,15 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'nuevo-recordatorio',
+    loadChildren: () =>
+      import('./recordatorios/nuevo-recordatorio/nuevo-recordatorio.module').then(
+        (m) => m.NuevoRecordatorioPageModule
+      ),
+  },
+  {
     path: '',
-    redirectTo: 'auth', // Redireccionamiento Automático a "auth"
+    redirectTo: 'auth', // Redireccionamiento automático a "auth"
     pathMatch: 'full',
   },
   {
@@ -38,15 +38,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/main/main.module').then((m) => m.MainPageModule),
   },
-  {
-    path: 'recordatorios',
-    loadChildren: () => import('./recordatorios/recordatorios.module').then( m => m.RecordatoriosPageModule)
-  },
-  {
-    path: 'nuevo-recordatorio',
-    loadChildren: () => import('./recordatorios/nuevo-recordatorio/nuevo-recordatorio.module').then( m => m.NuevoRecordatorioPageModule)
-  },
-
 ];
 
 @NgModule({

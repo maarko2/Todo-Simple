@@ -1,12 +1,6 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<ion-buttons slot="start">
+  <ion-back-button defaultHref="/"></ion-back-button>
+</ion-buttons>
 
 <ion-content [fullscreen]="true" style="--background: #a1dad8">
   <div class="d-flex-center">
@@ -35,10 +29,16 @@
         class="validators"
         *ngIf="form.controls.name.errors && form.controls.name.touched"
       >
-        <div class="requerimientos" *ngIf="form.controls.name.errors?.['required']">
+        <div
+          class="requerimientos"
+          *ngIf="form.controls.name.errors?.['required']"
+        >
           El nombre es requerido
         </div>
-        <div class="requerimientos" *ngIf="form.controls.name.errors?.['minlenght']">
+        <div
+          class="requerimientos"
+          *ngIf="form.controls.name.errors?.['minlenght']"
+        >
           El nombre debe tener al menos 4 caracteres
         </div>
       </div>
@@ -56,10 +56,16 @@
         class="validators"
         *ngIf="form.controls.email.errors && form.controls.email.touched"
       >
-        <div class="requerimientos" *ngIf="form.controls.email.errors?.['required']">
+        <div
+          class="requerimientos"
+          *ngIf="form.controls.email.errors?.['required']"
+        >
           El Correo es Requerido
         </div>
-        <div class="requerimientos" *ngIf="form.controls.email.errors?.['email']">
+        <div
+          class="requerimientos"
+          *ngIf="form.controls.email.errors?.['email']"
+        >
           Ingrese un Correo Valido
         </div>
       </div>
@@ -74,17 +80,14 @@
       ></app-custom-input>
       <div
         class="validators"
-        class="requerimientos" *ngIf="form.controls.password.errors && form.controls.password.touched"
+        class="requerimientos"
+        *ngIf="form.controls.password.errors && form.controls.password.touched"
       >
         <div *ngIf="form.controls.password.errors?.['required']">
           La Contraseña es Requerida
         </div>
       </div>
-      <ion-button
-        expand="block"
-        mode="ios"
-        class="boton"
-        type="submit"
+      <ion-button expand="block" mode="ios" class="boton" type="submit"
         >Registrarse
         <ion-icon slot="end" name="person-add-outline"></ion-icon>
       </ion-button>

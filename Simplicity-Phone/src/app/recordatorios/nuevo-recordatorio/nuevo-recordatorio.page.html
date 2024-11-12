@@ -1,24 +1,34 @@
+<ion-buttons slot="start">
+  <ion-back-button text="Retroceso" defaultHref="/"></ion-back-button>
+</ion-buttons>
+
 <ion-content [fullscreen]="true" style="--background: #a1dad8">
-  <form [formGroup]="recordatorioForm" (ngSubmit)="submit()" class="container-formulario">
-    <h1 class="Titulos-formulario">Escriba el Nombre del Medicamento</h1>
-    <ion-input formControlName="nombre" placeholder="Nombre del Medicamento"></ion-input>
+  <h1 class="Titulo-Principal">Nuevo Recordatorio</h1>
+  <form [formGroup]="reminderForm" (ngSubmit)="addReminder()">
+    <!-- Nombre del Recordatorio -->
+    <ion-item class="form-item">
+      <ion-label position="stacked" class="Titulo-Form">Nombre del Recordatorio</ion-label>
+      <ion-input formControlName="name" type="text" placeholder="Ejemplo: Paracetamol"></ion-input>
+    </ion-item>
 
-    <h1 class="Titulos-formulario">Seleccione los Días</h1>
-    <ion-list>
-      <ion-item *ngFor="let dia of dias">
-        <ion-checkbox
-          slot="start"
-          [value]="dia"
-          (ionChange)="onDaySelect(dia, $event)"
-          [checked]="isDaySelected(dia)">
-        </ion-checkbox>
-        <ion-label>{{ dia }}</ion-label> <!-- Esto muestra el texto al lado del checkbox -->
-      </ion-item>
-    </ion-list>
+    <!-- Selector de Hora -->
+    <ion-item class="form-item">
+      <ion-label position="stacked" class="Titulo-Form">Seleccione una Hora</ion-label>
+      <ion-datetime formControlName="time" presentation="time" display-format="HH:mm"></ion-datetime>
+    </ion-item>
 
-    <h1 class="Titulos-formulario">Seleccione la Hora</h1>
-    <ion-datetime formControlName="hora" displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+    <!-- Checkboxes Días de la Semana -->
+    <ion-item class="form-item">
+      <ion-label position="stacked" class="Titulo-Form">Seleccione los Días</ion-label>
+      <ion-list class="checkbox-list">
+        <ion-item *ngFor="let day of days">
+          <ion-checkbox slot="start" [value]="day" (ionChange)="toggleDay(day)"></ion-checkbox>
+          <ion-label>{{ day }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-item>
 
-    <ion-button expand="block" type="submit" [disabled]="!recordatorioForm.valid">Guardar recordatorio</ion-button>
+    <!-- Botón de Guardar -->
+    <ion-button expand="block" type="submit" class="save-button">Guardar Recordatorio</ion-button>
   </form>
 </ion-content>
