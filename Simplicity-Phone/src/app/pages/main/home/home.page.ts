@@ -17,8 +17,9 @@ export class HomePage implements OnInit {
     this.iab.create(`tel:${numeroTelefono}`, '_system');
   }
   abrirWhatsApp() {
-    this.iab.create('https://wa.me/', '_system');
+    this.iab.create('whatsapp://', '_system');
   }
+  
 
   firebaseSvc = inject(FirebaseService);
   utilsSvc = inject(UtilsService);
@@ -49,10 +50,17 @@ export class HomePage implements OnInit {
 
       // Formatear día de la semana y fecha
       const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+      const months = [
+        'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 
+        'Octubre', 'Noviembre', 'Diciembre'
+      ];
       const dayOfWeek = days[now.getDay()];
+      const day = now.getDate();
+      const month = months[now.getMonth()];
+      const year = now.getFullYear();
 
       if (dateElement) {
-        dateElement.textContent = `Hoy es ${dayOfWeek}, Chile`;
+        dateElement.textContent = `${dayOfWeek}, ${day} de ${month} del ${year}`;
       }
     }, 1000); // Actualizar cada 1 segundo
 
