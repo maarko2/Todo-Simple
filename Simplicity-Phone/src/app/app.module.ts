@@ -15,6 +15,9 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment.prod';
 import { ReactiveFormsModule } from '@angular/forms';
 
+// News API
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

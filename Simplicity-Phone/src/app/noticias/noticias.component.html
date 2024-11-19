@@ -3,55 +3,63 @@
     <ion-buttons slot="start">
       <ion-back-button text="" defaultHref="/"></ion-back-button>
     </ion-buttons>
+    <ion-title class="titulo-formal">Noticias</ion-title> <!-- Título con nueva tipografía -->
   </ion-toolbar>
 </ion-header>
 
-
-<ion-content [fullscreen]="true" style="--background: #F4F4F4;">
-
-  <!-- ############### TITULO NOTICIAS ################ -->
+<ion-content [fullscreen]="true" style="--background: #f4f4f4">
+  <!-- TITULO NOTICIAS -->
   <div class="contenedor-titulo-noticias">
-    <div class="titulo-noticias">
-      NOTICIAS
-    </div>
+    <div class="titulo-noticias">Noticias</div>
   </div>
 
-  <!-- ############### BOTÓN TIPO DE NOTICIA ################ -->
-  <div class="contenedor-tipo-noticias">
-    <ion-button id="open-popover" class="boton-tipo-noticia">Tipo de Noticia</ion-button>
+  <!-- BOTÓN TIPO DE NOTICIA -->
+  <div *ngFor="let categoria of categorias" class="contenedor-tipo-noticias">
+    <ion-button
+      [disabled]="cargando"
+      class="boton-tipo-noticia"
+      (click)="cambiarCategoria(categoria)"
+    >
+      {{ categoria | titlecase }}
+    </ion-button>
   </div>
 
-  <!-- ############### NOTICIAS ################ -->
-  <div class="contenedor-noticias">
-    <ion-card>
-      <ion-img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Noticia 1"></ion-img>
-      <ion-card-header>
-        <ion-card-title>Noticia 1</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Esta es la noticia 1. Aquí puedes ver un resumen breve que invita a los usuarios a leer más.
-      </ion-card-content>
-    </ion-card>
+  <!-- INDICADOR DE CARGA -->
+  <div *ngIf="cargando" class="loading">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
 
-    <ion-card>
-      <ion-img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Noticia 2"></ion-img>
-      <ion-card-header>
-        <ion-card-title>Noticia 2</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Breve contenido de la noticia 2, con un enfoque rápido y fácil de leer para los usuarios.
-      </ion-card-content>
-    </ion-card>
+  <!-- MENSAJE DE ERROR -->
+  <div *ngIf="error" class="error-mensaje">
+    {{ error }}
+  </div>
 
-    <ion-card>
-      <ion-img src="https://ionicframework.com/docs/img/demos/card-media.png" alt="Noticia 3"></ion-img>
+  <!-- LISTA DE NOTICIAS -->
+  <div *ngIf="noticias && noticias.length > 0; else sinDatos">
+    <ion-card *ngFor="let noticia of noticias">
+      <ion-img
+        [src]="noticia.image || 'assets/default-image.png'"
+        [alt]="noticia.title"
+        class="imagen-noticia"
+      ></ion-img>
+
       <ion-card-header>
-        <ion-card-title>Noticia 3</ion-card-title>
+        <ion-card-title class="titulo-noticia">
+          {{ noticia.title || "Título no disponible" }}
+        </ion-card-title>
       </ion-card-header>
-      <ion-card-content>
-        Aquí está el contenido principal de la noticia 3, resumido para que los usuarios puedan escanearlo rápidamente.
+
+      <ion-card-content class="contenido-noticia">
+        {{ noticia.description | slice:0:100 }}... <!-- Breve descripción truncada -->
       </ion-card-content>
+
+      <ion-button *ngIf="noticia.url" href="{{ noticia.url }}" target="_blank" class="boton-leer">
+        Leer más
+      </ion-button>
     </ion-card>
   </div>
 
+  <ng-template #sinDatos>
+    <div class="sin-datos">No hay noticias disponibles en este momento.</div>
+  </ng-template>
 </ion-content>
