@@ -1,10 +1,12 @@
-# Todo Simple
+# Todo Simple 😊
 
 Una aplicación móvil integral diseñada para simplificar la experiencia digital de las personas mayores, facilitando el acceso a noticias personalizadas, llamadas de emergencia, redes sociales y recordatorios de manera intuitiva y accesible.
 
+![Imagen ](https://imgur.com/a/tthv6Rx)
+
 ---
 
-## Descripción del Proyecto
+## Descripción del Proyecto 📝
 
 **Todo Simple** es una aplicación móvil creada para mejorar la calidad de vida de los adultos mayores, permitiéndoles mantenerse informados y conectados sin complicaciones. El objetivo es brindar una plataforma sencilla e intuitiva que centralice funcionalidades esenciales, tales como:
 
@@ -15,7 +17,7 @@ Una aplicación móvil integral diseñada para simplificar la experiencia digita
 
 ---
 
-## Características
+## Características 🚀
 
 - **Interfaz Amigable:** Diseñada con botones grandes, instrucciones claras y fuentes ampliadas.
 - **Filtrado Personalizado de Noticias:** Permite al usuario seleccionar temáticas de su interés.
@@ -25,7 +27,7 @@ Una aplicación móvil integral diseñada para simplificar la experiencia digita
 
 ---
 
-## Tecnologías Utilizadas
+## Tecnologías Utilizadas 💻
 
 - **Ionic Framework:** Desarrollo de la interfaz móvil híbrida.
 - **Angular:** Framework para el manejo del front-end.
@@ -33,8 +35,6 @@ Una aplicación móvil integral diseñada para simplificar la experiencia digita
 - **Node.js:** Desarrollo de backend.
 
 ---
-
-## Instalación
 
 ### Requisitos
 
