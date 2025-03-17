@@ -2,7 +2,7 @@
 
 Una aplicación móvil integral diseñada para simplificar la experiencia digital de las personas mayores, facilitando el acceso a noticias personalizadas, llamadas de emergencia, redes sociales y recordatorios de manera intuitiva y accesible.
 
-![Imagen ](https://imgur.com/a/tthv6Rx)
+![Image](https://github.com/user-attachments/assets/b7645ffc-ec5f-4069-b715-dcb9389a3408)
 
 ---
 
