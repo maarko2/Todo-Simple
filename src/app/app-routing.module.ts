@@ -30,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'auth', // Redireccionamiento automático a "auth"
+    redirectTo: 'seleccion-cuenta', // Redireccionamiento automático a "seleccion-cuenta"
     pathMatch: 'full',
   },
   {
@@ -38,6 +38,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/main/main.module').then((m) => m.MainPageModule),
   },
+  {
+    path: 'seleccion-cuenta',
+    loadChildren: () => import('./pages/seleccion-cuenta/seleccion-cuenta.module').then( m => m.SeleccionCuentaPageModule)
+  },
+  {
+    path: 'sign-up-cuidador',
+    loadChildren: () =>
+      import('./pages/auth/sign-up-cuidador/sign-up-cuidador.module').then(
+        (m) => m.SignUpCuidadorPageModule
+      ),
+  },
+
+
 ];
 
 @NgModule({

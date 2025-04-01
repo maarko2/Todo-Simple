@@ -1,0 +1,109 @@
+$fuente-inter: 'Inter', sans-serif;
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5vw; /* Ajuste de padding para pantallas pequeñas */
+}
+
+.textos_campos_rellenables {
+  display: block;
+  font-size: 7vw; /* Tamaño de fuente responsivo */
+  margin-bottom: -25px;
+  margin-top: 0px; /* Ajuste de margen superior */
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contenedor-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.Titulo_Bienvenida {
+  margin-top: -8%; /* Ajuste de margen superior */
+  text-align: center;
+  font-size: 15vw; /* Tamaño de fuente responsivo */
+  font-family: $fuente-inter;
+  font-weight: lighter;
+  color: black;
+}
+
+.Subtitulo_Informativo {
+  margin-top: -4%;
+  text-align: center;
+  font-size: 4vw; /* Tamaño de fuente responsivo */
+  font-family: $fuente-inter;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.requerimientos {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 3.5vw; /* Tamaño de fuente responsivo */
+  color: rgb(112, 15, 15);
+  margin: 5px 0; /* Reducir márgenes para más espacio */
+  padding: 0 10px; /* Añadir padding lateral si es necesario */
+}
+
+.boton {
+  background-color: #36AD8B;
+  color: white;
+  font-size: 5vw; /* Tamaño de fuente responsivo */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 70%;
+  font-weight: bold;
+  min-height: unset;
+  outline: none;
+  margin-top: 0px;
+}
+
+ion-button {
+  --background: #36AD8B; /* Color de fondo */
+  --color: white; /* Color del texto */
+  --background-hover: #2E8B57; /* Color del fondo en hover */
+  --background-activated: #2E8B57; /* Color del fondo al estar presionado */
+  --background-focused: #2E8B57; /* Color al estar enfocado */
+}
+
+.campos_rellenables {
+  width: 90%; /* Ajuste responsivo del ancho */
+  padding: 15px; /* Ajustar el padding */
+  border-radius: 50px;
+  font-size: 1.5rem; /* Tamaño de fuente adaptable */
+  text-align: center;
+  margin: 10px auto;
+  height: auto; /* Deja que el padding defina la altura */
+  color: black;
+}
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+  .requerimientos {
+    font-size: 1.2rem; /* Aumentar el tamaño en pantallas más grandes */
+  }
+
+  .Titulo_Bienvenida {
+    font-size: 4rem; /* Ajuste de tamaño de fuente en pantallas más grandes */
+  }
+
+  .Subtitulo_Informativo {
+    font-size: 2rem; /* Ajuste de tamaño de fuente */
+  }
+
+  .textos_campos_rellenables {
+    font-size: 2rem;
+  }
+
+  .boton {
+    font-size: 1.75rem;
+  }
+}

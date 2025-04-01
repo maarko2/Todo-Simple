@@ -16,6 +16,7 @@ export class SignUpPage implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+    user_type: new FormControl('adulto_mayor')  // Valor por defecto
   });
 
   firebaseSvc = inject(FirebaseService);
