@@ -4,6 +4,11 @@ import { NoAuthGuard } from './guards/no-auth.guard';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'seleccion-cuenta', // Redireccionamiento automático a "seleccion-cuenta"
+    pathMatch: 'full',
+  },
+  {
     path: 'noticias',
     loadChildren: () =>
       import('./noticias/noticias.module').then((m) => m.NoticiasModule),
@@ -29,14 +34,19 @@ const routes: Routes = [
       ),
   },
   {
-    path: '',
-    redirectTo: 'seleccion-cuenta', // Redireccionamiento automático a "seleccion-cuenta"
-    pathMatch: 'full',
-  },
-  {
     path: 'main',
     loadChildren: () =>
       import('./pages/main/main.module').then((m) => m.MainPageModule),
+  },
+  {
+    path: 'home-cuidador',
+    loadChildren: () =>
+      import('./pages/main/home-cuidador/home-cuidador.module').then((m) => m.HomeCuidadorPageModule),
+  },
+  {
+    path: 'profile-cuidador',
+    loadChildren: () =>
+      import('./pages/main/profile-cuidador/profile-cuidador.module').then((m) => m.ProfileCuidadorPageModule),
   },
   {
     path: 'seleccion-cuenta',

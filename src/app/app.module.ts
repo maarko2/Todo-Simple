@@ -6,7 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { InAppBrowser } from '@awesome-cordova-plugins/in-app-browser/ngx';
 
 
@@ -26,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireStorageModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

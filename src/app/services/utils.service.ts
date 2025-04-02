@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, ToastController } from '@ionic/angular';
 //import { url } from 'inspector';
 
 @Injectable({
@@ -9,8 +9,8 @@ import { LoadingController } from '@ionic/angular';
 export class UtilsService {
 
   loadingCtrl = inject(LoadingController);
-  router = inject(Router)
-
+  router = inject(Router);
+  toastCtrl = inject(ToastController);
 
   // =========== Loading ============
   loading(){
@@ -32,5 +32,10 @@ export class UtilsService {
     return JSON.parse(localStorage.getItem(key))
   }
 
+  // =========== Presenta un Toast ============
+  async presentToast(opts?: any) {
+    const toast = await this.toastCtrl.create(opts);
+    toast.present();
+  }
 
 }

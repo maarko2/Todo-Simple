@@ -1,0 +1,59 @@
+<ion-content [fullscreen]="true" style="--background: #a1dad8">
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="profile-image">
+        <img [src]="user?.photoURL || 'assets/icon/default-avatar.png'" alt="Profile Picture">
+        <ion-button fill="clear" class="edit-button" (click)="takeImage()">
+          <ion-icon name="camera"></ion-icon>
+        </ion-button>
+      </div>
+      <h1>Mi Perfil</h1>
+    </div>
+
+    <div class="profile-content">
+      <div class="info-card">
+        <ion-button fill="clear" class="toggle-edit-button" (click)="toggleEdit()">
+          <ion-icon [name]="isEditing ? 'close-outline' : 'create-outline'"></ion-icon>
+        </ion-button>
+
+        <form [formGroup]="form">
+          <div class="info-item">
+            <ion-label>Nombre Completo</ion-label>
+            <ion-input 
+              type="text" 
+              formControlName="name" 
+              [readonly]="!isEditing"
+              placeholder="Ingrese su nombre completo">
+            </ion-input>
+          </div>
+
+          <div class="info-item">
+            <ion-label>Correo Electrónico</ion-label>
+            <ion-input 
+              type="email" 
+              formControlName="email" 
+              readonly
+              placeholder="correo@ejemplo.com">
+            </ion-input>
+          </div>
+        </form>
+      </div>
+
+      <div class="button-container" *ngIf="isEditing">
+        <ion-button 
+          class="save-button" 
+          expand="block" 
+          (click)="saveChanges()" 
+          [disabled]="!form.valid || !form.dirty">
+          Guardar Cambios
+        </ion-button>
+      </div>
+
+      <div class="button-container">
+        <ion-button class="back-button" expand="block" routerLink="/home-cuidador">
+          Volver
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
