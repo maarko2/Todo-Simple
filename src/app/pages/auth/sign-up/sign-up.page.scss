@@ -7,6 +7,18 @@ form {
   padding: 0 5vw; /* Ajuste de padding para pantallas pequeñas */
 }
 
+ion-back-button {
+  --padding-start: 20px;
+  --icon-font-size: 24px;
+  --icon-font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+ion-toolbar {
+  --min-height: 60px;
+}
+
 .textos_campos_rellenables {
   display: block;
   font-size: 7vw; /* Tamaño de fuente responsivo */

@@ -74,6 +74,18 @@ ion-button {
   --background-focused: #2E8B57; /* Color al estar enfocado */
 }
 
+ion-back-button {
+  --padding-start: 20px;
+  --icon-font-size: 24px;
+  --icon-font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+ion-toolbar {
+  --min-height: 60px;
+}
+
 .campos_rellenables {
   width: 90%; /* Ajuste responsivo del ancho */
   padding: 15px; /* Ajustar el padding */

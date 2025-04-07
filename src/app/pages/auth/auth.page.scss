@@ -15,6 +15,18 @@ $fuente-inter: 'Inter', sans-serif;
   color: black;
 }
 
+ion-back-button {
+  --padding-start: 20px;
+  --icon-font-size: 24px;
+  --icon-font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+ion-toolbar {
+  --min-height: 60px;
+}
+
 .Subtitulo_Informativo {
   margin-top: -5%; /* Ajuste de margen superior */
   text-align: center;
