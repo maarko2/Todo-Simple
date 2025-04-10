@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'sign-up-cuidador',
     loadChildren: () => import('./sign-up-cuidador/sign-up-cuidador.module').then( m => m.SignUpCuidadorPageModule)
   },
+  {
+    path: 'auth-cuidador',
+    loadChildren: () => import('./auth-cuidador/auth-cuidador.module').then( m => m.AuthCuidadorPageModule)
+  },
 ];
 
 @NgModule({

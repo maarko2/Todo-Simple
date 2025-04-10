@@ -20,6 +20,12 @@ const routes: Routes = [
     canActivate: [NoAuthGuard],
   },
   {
+    path: 'auth-cuidador',
+    loadChildren: () =>
+      import('./pages/auth/auth-cuidador/auth-cuidador.module').then((m) => m.AuthCuidadorPageModule),
+    canActivate: [NoAuthGuard],
+  },
+  {
     path: 'recordatorios',
     loadChildren: () =>
       import('./recordatorios/recordatorios.module').then(
@@ -59,7 +65,22 @@ const routes: Routes = [
         (m) => m.SignUpCuidadorPageModule
       ),
   },
-
+  {
+    path: 'main/home-cuidador',
+    loadChildren: () => import('./pages/main/home-cuidador/home-cuidador.module').then(m => m.HomeCuidadorPageModule)
+  },
+  {
+    path: 'gestion-perfiles',
+    loadChildren: () => import('./pages/main/home-cuidador/gestion-perfiles/gestion-perfiles.module').then(m => m.GestionPerfilesPageModule)
+  },
+  {
+    path: 'vincular-cuenta',
+    loadChildren: () => import('./pages/main/home-cuidador/vincular-cuenta/vincular-cuenta.module').then( m => m.VincularCuentaPageModule)
+  },
+  {
+    path: 'config-preferencias',
+    loadChildren: () => import('./pages/main/home-cuidador/gestion-perfiles/config-preferencias/config-preferencias.module').then( m => m.ConfigPreferenciasPageModule)
+  }
 
 ];
 

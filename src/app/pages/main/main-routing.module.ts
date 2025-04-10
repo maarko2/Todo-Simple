@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { MainPage } from './main.page';
 
 const routes: Routes = [
@@ -19,9 +18,18 @@ const routes: Routes = [
   {
     path: 'home-cuidador',
     loadChildren: () => import('./home-cuidador/home-cuidador.module').then( m => m.HomeCuidadorPageModule)
-  },  {
+  },
+  {
     path: 'profile-cuidador',
     loadChildren: () => import('./profile-cuidador/profile-cuidador.module').then( m => m.ProfileCuidadorPageModule)
+  },
+  {
+    path: 'vincular-cuenta',
+    loadChildren: () => import('./home-cuidador/vincular-cuenta/vincular-cuenta.module').then( m => m.VincularCuentaPageModule)
+  },
+  {
+    path: 'config-preferencias',
+    loadChildren: () => import('./home-cuidador/gestion-perfiles/config-preferencias/config-preferencias.module').then( m => m.ConfigPreferenciasPageModule)
   }
 
 
